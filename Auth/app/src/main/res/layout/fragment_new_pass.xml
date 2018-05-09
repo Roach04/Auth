@@ -1,0 +1,98 @@
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:background="@color/background"
+        tools:showIn="@layout/activity_new_pass"
+        tools:context="frags.NewPassFragment">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/newPassText"
+            android:textSize="30dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:typeface="monospace"
+            android:id="@+id/textViewNewPass"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/textViewNewPass"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:src="@mipmap/lock"
+                    android:layout_height="60dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:paddingTop="22dp"
+                    android:hint="@string/pass"
+                    android:id="@+id/editTextNewPass"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_marginTop="50dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:src="@mipmap/lock"
+                    android:layout_height="60dp" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:paddingTop="22dp"
+                    android:inputType="textPassword"
+                    android:ems="10"
+                    android:id="@+id/editTextNewConfirmPass"
+                    android:hint="@string/confi_pass"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:textSize="20dp"
+                android:textColor="@color/colorText"
+                android:background="@color/colorAccent"
+                android:layout_marginTop="50dp"
+                android:onClick="change"
+                android:typeface="monospace"
+                android:textAllCaps="false"
+                android:text="Change Password."
+                android:id="@+id/button"
+                android:layout_gravity="center_horizontal" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+</ScrollView>
+
+
